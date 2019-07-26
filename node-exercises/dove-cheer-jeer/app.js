@@ -6,7 +6,7 @@ app.get('/cheer.txt', function(request, response) {
 });
 
 app.get('/jeer.txt', function(req, res) {
-	response.end('OMG, that was so baaaaaaad!');
+	res.end('OMG, that was so baaaaaaad!');
 });
 
 var server = app.listen(8080, function() {
