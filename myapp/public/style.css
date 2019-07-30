@@ -1,0 +1,69 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	color: #333;
+	width: 100%;
+	margin: 0;
+}
+
+.main-header {
+	background-color: #f06d06;
+	color: #fafafa;
+	margin: 0;
+	padding: 50px 10%;
+	font-size: 50px;
+	font-family: 'Pacifico', cursive;
+}
+
+.new-tweet-container {
+	padding: 50px 10%;
+	border: 2px solid grey;
+	margin: 10%;
+	margin-top: 50px;
+}
+
+.new-tweet-input {
+	font-family: 'Indie Flower', cursive;
+}
+
+.new-tweet-button {
+	font-family: 'Lobster', cursive;
+	background-color: #383;
+	color: #fafafa;
+	font-size: 20px;
+	float: right;
+	padding: 4px 10px;
+	border: 1px transparent black;
+}
+
+.new-tweet-button:hover {
+	background-color: #398;
+	border: 2px solid lightblue;
+}
+
+.new-tweet-button:active {
+	background-color: #133;
+}
+
+.tweets-section {
+
+}
+
+.tweet-container {
+	
+}
+
+.tweet-time {
+
+}
+
+.tweet-body {
+
+}
+
+/*font-family: 'Indie Flower', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Lobster', cursive;*/
