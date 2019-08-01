@@ -4,9 +4,9 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 var tweets = [
-	{text: "Hai", time: new Date().getTime() - 12300},
+	{text: "Weclcome to the Duhver web program!", time: new Date().getTime() - 12300},
 	{text: "Type something up there, DUH!", time: new Date().getTime() - 5000},
-	{text: "Welcome to This WebApp!", time: new Date().getTime()},
+	{text: "Just share your thoughts, obviously :P", time: new Date().getTime()},
 ];
 
 app.use(express.static(__dirname + '/public'));

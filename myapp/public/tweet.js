@@ -11,26 +11,30 @@ $.ajax({
 function prependNewTweet(data) {
 
 	var newTweet = "<div class='tweet-container'>" + 
-		"<div class='tweet-time'>" + new Date(data.time).toLocaleSTring() + "</div>" +
+		"<div class='tweet-time'>" + new Date(data.time).toLocaleString() + "</div>" +
 		"<div class='tweet-body'>" + data.text + "</div>" +
 		"</div>";
-	console.log("here");
-	$("#tweets-section").append(newTweet);
-	console.log("here");
+	
+	$("#tweets-section").prepend(newTweet);
+	
 };
 
 
-$('#tweet-button').click( function() {
-	console.log("here");
-	$.ajax({
-		type: "POST",
-		url: "/ajax",
-		contentType: 'application/json',
-		data: JSON.stringify({tweet: $('#new-tweet').val()}),
-		success: function(data) {
-			prependNewTweet(data.tweets[1]);
-			$("#new-tweet").text("");
-		}
-	})
-	console.log("here");
+$('.new-tweet-button').click( function() {
+	if ($("#new-tweet").val() === "") {
+		console.log("Input bar was Empty");
+	}
+	else {
+		$.ajax({
+			type: "POST",
+			url: "/ajax",
+			contentType: 'application/json',
+			data: JSON.stringify({tweet: $('#new-tweet').val()}),
+			success: function(data) {
+				prependNewTweet(data);
+				$("#new-tweet").val("");
+			}
+		})
+	}
+	
 });
