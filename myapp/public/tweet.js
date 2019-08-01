@@ -1,6 +1,14 @@
-var $tweetbtn = $(".new-tweet-button");
+var $tweetbtn = $("#tweet-button");
 
 $tweetbtn.click( function() {
+	$.ajax({
+		type: "POST",
+		url: "/ajax",
+		
+	})
+
+
+
 	$(".new-tweet-input").val("");
 
 });
@@ -16,8 +24,12 @@ $tweetbtn.click( function() {
 // });
 
 function appendNewTweet(tweet) {
+
 	var newTweet = "<div class='tweet-container'>" + 
 		"<div class='tweet-time'>" + new Date(tweet.time).toLocaleSTring() + "</div>" +
 		"<div class='tweet-body'>" + tweet.text + "</div>" +
 		"</div>";
+
+	$("#tweets-section").prepend(newTweet);
 }
+

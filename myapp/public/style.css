@@ -18,15 +18,19 @@ body {
 	font-family: 'Pacifico', cursive;
 }
 
-.new-tweet-container {
-	padding: 50px 10%;
-	border: 2px solid grey;
+.new-tweet-container.tweet-container {
+	border-color: #f06d06;
 	margin: 10%;
 	margin-top: 50px;
+	padding: 40px 7%;
+	overflow: hidden;
 }
 
 .new-tweet-input {
 	font-family: 'Indie Flower', cursive;
+	width: 100%;
+	margin: 10px;
+	padding: 2px;
 }
 
 .new-tweet-button {
@@ -48,12 +52,13 @@ body {
 	background-color: #133;
 }
 
-.tweets-section {
-
+.tweets {
+	margin: 50px;
+	text-align: center;
 }
 
 .tweet-container {
-	
+	border: 2px solid black;
 }
 
 .tweet-time {
