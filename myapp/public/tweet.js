@@ -19,7 +19,7 @@ function prependNewTweet(data) {
 	
 };
 
-
+ 
 $('.new-tweet-button').click( function() {
 	if ($("#new-tweet").val() === "") {
 		console.log("Input bar was Empty");
@@ -36,5 +36,4 @@ $('.new-tweet-button').click( function() {
 			}
 		})
 	}
-	
 });
